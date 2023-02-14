@@ -1,0 +1,58 @@
+specVersion: "1.0"
+metadata:
+  name: DemoSAPUI5
+type: application
+# https://sap.github.io/ui5-tooling/pages/extensibility/CustomServerMiddleware/
+server:
+  customMiddleware:
+  - name: ui5-middleware-simpleproxy
+    mountPath: /srv/
+    afterMiddleware: compression
+    configuration:
+      strictSSL: false
+      ignoreCertError: true
+      baseUri: https://services.odata.org/V2/Northwind/Northwind.svc/
+  - name: ui5-middleware-simpleproxy
+    mountPath: /serv/
+    afterMiddleware: compression
+    configuration:
+      strictSSL: false
+      ignoreCertError: true
+      baseUri: https://services.odata.org/northwind/northwind.svc/
+  - name: ui5-middleware-livereload
+    afterMiddleware: compression
+    configuration:
+      extraExts: "xml,json,properties"
+      path: "webapp"
+framework:
+  name: SAPUI5
+  version: "1.81.0"
+  libraries:
+    - name: sap.m
+    - name: sap.ui.core
+    - name: themelib_sap_belize
+customConfiguration:
+  deployer:
+    type: sap-netweaver
+    sourcePath: dist/ # Path to the project to be deployed
+    resources:
+      excludes:
+        - "dist/path_to_excluded/**"
+    connection:     
+      url: https://10.25.154.52:44300/
+    #  proxy: https://euwdrh202al02.spradv.sbp.local:44300
+      strictSSL: false
+      SSLCertificatePath: webapp/certs/eycert.crt
+    credentials:
+      username: VPANICKER
+      password: Welcome@123
+    abapRepository:
+      client: 300
+      language: EN
+      transportRequest: SV4K900379
+      package: $TMP
+      bspApplication: ZDEPLOYAPP001
+      bspApplicationText: TEST DEPLOY APP x1
+      method: odata
+      skipAdtValidations: true
+      appIndexCalculate: true

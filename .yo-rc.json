@@ -1,0 +1,21 @@
+{
+  "@sapui5/generator-sapui5-templates": {
+    "promptValues": {
+      "ApplicationTitle": "Products",
+      "ApplicationDescription": "Sample UI5",
+      "FLP": false,
+      "ServiceBaseUri": "https://service.odata.org/V2/Northwind/Northwind.svc/",
+      "DatasourceUrl": "/svc/",
+      "ObjectCollection": "Products",
+      "ObjectCollection_Key": "ProductID",
+      "Object_Identifier": "ProductName",
+      "Object_Number": "UnitPrice",
+      "Object_UnitOfMeasure": "",
+      "LineItemCollection": "",
+      "LineItemCollection_Key": "",
+      "LineItem_Identifier": "",
+      "LineItem_Number": "",
+      "LineItem_UnitOfMeasure": ""
+    }
+  }
+}

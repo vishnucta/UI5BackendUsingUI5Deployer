@@ -1,0 +1,13 @@
+{
+    "base": "./dist",
+    "conn_usestrictssl": false,
+    "conn_server": "https://10.25.154.52:44300/",
+    "conn_client": "300",
+    "conn_user": "VPANICKER",
+    "conn_password": "Welcome@123",
+    "useStrictSSL": false,
+    "abap_package": "$TMP",
+    "abap_bsp": "ZVSCODE_APP",
+    "abap_bsp_text": "UI5 upload through VSCode App",
+    "abap_transport": "SV4K900379"
+}
