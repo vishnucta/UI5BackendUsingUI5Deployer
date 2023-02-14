@@ -42,7 +42,7 @@ customConfiguration:
       url: https://10.25.154.52:44300/
     #  proxy: https://euwdrh202al02.spradv.sbp.local:44300
       strictSSL: false
-      SSLCertificatePath: webapp/certs/eycert.crt
+    #  SSLCertificatePath: certs/eycert.crt
     credentials:
       username: VPANICKER
       password: Welcome@123
